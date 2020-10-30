@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        BtnCadastrar.setOnClickListener {
+        Cadastrar.setOnClickListener {
             val intent = Intent(this, ActivityCadastro::class.java)
             startActivity(intent)
         }
