@@ -57,7 +57,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="313dp" />
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="307dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
