@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.xposedtelas.FirstFragment"
+        android:name="com.example.xposedtelas.CadastroActivity"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/tela_cadastro">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
