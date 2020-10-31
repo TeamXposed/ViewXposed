@@ -1,6 +1,6 @@
 package com.example.xposedtelas.Retrofit.Service
 
-import com.example.xposedtelas.Model.Client
+import com.example.Model.Client
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET

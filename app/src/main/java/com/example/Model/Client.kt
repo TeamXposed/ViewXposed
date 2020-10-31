@@ -1,4 +1,4 @@
-package com.example.xposedtelas.Model
+package com.example.Model
 
 data class Client(
     val nome: String,

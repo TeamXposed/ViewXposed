@@ -1,6 +1,6 @@
 package com.example.xposedtelas.Retrofit.Client
 
-import com.example.xposedtelas.Model.Client
+import com.example.Model.Client
 import com.example.xposedtelas.Retrofit.RetrofitInitializer
 import com.example.xposedtelas.Retrofit.callback
 

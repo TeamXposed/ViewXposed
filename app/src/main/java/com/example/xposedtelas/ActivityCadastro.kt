@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.xposedtelas.Model.Client
+import com.example.Model.Client
 import com.example.xposedtelas.Retrofit.Client.ClientWeb
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
@@ -33,16 +33,13 @@ class ActivityCadastro : AppCompatActivity() {
 
         ClientWeb().insert(client, {
             created(it)
-            Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Falha ao realizar cadastro", Toast.LENGTH_LONG).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }, {
-            Toast.makeText(this, "Falha ao realizar cadastro", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         })
     }
-
-
-
-
-
 }
