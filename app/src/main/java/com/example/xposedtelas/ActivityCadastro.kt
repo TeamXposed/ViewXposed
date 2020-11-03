@@ -3,6 +3,7 @@ package com.example.xposedtelas
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Toast
 import com.example.Model.Client
 import com.example.xposedtelas.Retrofit.Client.ClientWeb
@@ -19,7 +20,7 @@ class ActivityCadastro : AppCompatActivity() {
         }
 
         Cadastrar.setOnClickListener(){
-            this.insert { }
+            this.validarCampos()
         }
     }
 
@@ -41,5 +42,48 @@ class ActivityCadastro : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         })
+    }
+
+    private fun validarCampos() {
+        val campNome: String = nome.text.toString();
+        val campEmail: String = email.text.toString();
+        val campSenha: String = senha.text.toString();
+        val campTelefone: String = telefone.text.toString();
+        val campCpf: String = cpf.text.toString();
+
+
+        if(TextUtils.isEmpty(campNome)){
+             nome.error = "Preencha o campo de Nome";
+        }else if(campNome.trim().length <= 3 ){
+            nome.error = "O Nome não pode ter menos de 4 Letras";
+        };
+
+        if(TextUtils.isEmpty(campEmail)){
+            email.error = "Preencha o campo de Email";
+        }else if(campEmail.trim().length <= 3 ){
+            email.error = "O Email não pode ter menos de 4 Caracteres";
+        };
+
+        if(TextUtils.isEmpty(campSenha)){
+            senha.error = "Preencha o campo de Senha";
+        }else if(campSenha.trim().length <= 3 ){
+            senha.error = "A Senha não pode ter menos de 4 Letras ";
+        };
+
+        if(TextUtils.isEmpty(campCpf)){
+            cpf.error = "Preencha o campo de CPF";
+        }else if(campCpf.trim().length < 10){
+            cpf.error = "O CPF não pode ter menos ou mais de 11 Digitos!";
+        };
+
+        if(TextUtils.isEmpty(campTelefone)){
+            telefone.error = "Preencha o campo de Telefone";
+        }else if(campTelefone.trim().length < 7 ){
+            telefone.error = "O Telefone não pode ter menos de 8 Caracteres ";
+        }
+
+        else  {
+            this.insert {  };
+        }
     }
 }
