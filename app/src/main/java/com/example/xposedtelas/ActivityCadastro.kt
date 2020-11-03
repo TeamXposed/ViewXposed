@@ -54,32 +54,34 @@ class ActivityCadastro : AppCompatActivity() {
 
         if(TextUtils.isEmpty(campNome)){
              nome.error = "Preencha o campo de Nome";
-        }else if(campNome.trim().length <= 3 ){
-            nome.error = "O Nome não pode ter menos de 4 Letras";
+        }else if(campNome.trim().length < 5 ){
+            nome.error = "O Nome não pode ter menos de 5 Letras";
         };
 
         if(TextUtils.isEmpty(campEmail)){
             email.error = "Preencha o campo de Email";
-        }else if(campEmail.trim().length <= 3 ){
-            email.error = "O Email não pode ter menos de 4 Caracteres";
+        }else if(campEmail.trim().length < 10 ){
+            email.error = "O Email não pode ter menos de 10 Caracteres";
         };
 
         if(TextUtils.isEmpty(campSenha)){
             senha.error = "Preencha o campo de Senha";
-        }else if(campSenha.trim().length <= 3 ){
-            senha.error = "A Senha não pode ter menos de 4 Letras ";
+        }else if(campSenha.trim().length < 8 ){
+            senha.error = "A Senha não pode ter menos de 8 Letras ";
         };
 
         if(TextUtils.isEmpty(campCpf)){
             cpf.error = "Preencha o campo de CPF";
-        }else if(campCpf.trim().length < 10){
-            cpf.error = "O CPF não pode ter menos ou mais de 11 Digitos!";
+        }else if(campCpf.trim().length > 11){
+           cpf.error = "O CPF não pode ter mais de 11 Digitos!"
+        } else if(campCpf.trim().length < 11){
+            cpf.error = "O CPF não pode ter menos de 11 Digitos!";
         };
 
         if(TextUtils.isEmpty(campTelefone)){
             telefone.error = "Preencha o campo de Telefone";
-        }else if(campTelefone.trim().length < 7 ){
-            telefone.error = "O Telefone não pode ter menos de 8 Caracteres ";
+        }else if(campTelefone.trim().length < 9){
+            telefone.error = "O Telefone não pode ter menos de 9 Caracteres ";
         }
 
         else  {
