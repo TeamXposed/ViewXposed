@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/anton</item>
         <item>@font/audiowide</item>
         <item>@font/autour_one</item>
         <item>@font/chewy</item>
+        <item>@font/nosifer</item>
     </array>
 </resources>
