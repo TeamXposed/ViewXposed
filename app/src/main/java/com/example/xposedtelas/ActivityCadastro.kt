@@ -30,7 +30,7 @@ class ActivityCadastro : AppCompatActivity() {
         val senha: String = senha.text.toString();
         val telefone: String = telefone.text.toString();
         val cpf: String = cpf.text.toString();
-        val client = Client(nome = nome, email = email, senha = senha, telefone = telefone, cpf = cpf)
+        val client = Client(nome = nome,telefone = telefone, email = email, senha = senha, cpf = cpf)
 
         ClientWeb().insert(client, {
             created(it)
