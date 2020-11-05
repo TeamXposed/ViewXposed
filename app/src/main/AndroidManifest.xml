@@ -6,14 +6,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@drawable/hacker1"
         android:label="@string/Xposed"
         android:roundIcon="@drawable/hacker1"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ActivityCadastro"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity_rank"></activity>
+        <activity android:name=".ActivityCadastro" />
         <activity
             android:name=".MainActivity2"
             android:label="@string/title_activity_main2"
