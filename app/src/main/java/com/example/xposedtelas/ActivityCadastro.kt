@@ -34,11 +34,11 @@ class ActivityCadastro : AppCompatActivity() {
 
         ClientWeb().insert(client, {
             created(it)
-            Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Falha a realizar cadastro", Toast.LENGTH_LONG).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }, {
-            Toast.makeText(this, "Falha", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         })
