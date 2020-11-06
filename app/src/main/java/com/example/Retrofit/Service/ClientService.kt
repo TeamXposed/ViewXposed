@@ -15,5 +15,4 @@ interface ClientService {
     @POST("usuarioselect")
     fun select(@Body client: Client): Call<Client>
 
-
 }
