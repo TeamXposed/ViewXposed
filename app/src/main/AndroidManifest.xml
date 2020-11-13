@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity_rank"></activity>
+        <activity android:name=".activity_denunciar"></activity>
+        <activity android:name=".activity_perfil" />
+        <activity android:name=".activity_rank" />
         <activity android:name=".ActivityCadastro" />
         <activity
             android:name=".MainActivity2"
