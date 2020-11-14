@@ -22,4 +22,18 @@ class DenunciaWeb {
             }
         }))
     }
+
+    fun list(success: (denuncias: List<Denuncia>) -> Unit,
+             failure: (throwable: Throwable) -> Unit) {
+        val call = RetrofitInitializer().denunciaservice().list()
+        call.enqueue(callback({ response ->
+            response?.body()?.let {
+                success(it)
+            }
+        }, { throwable ->
+            throwable?.let {
+                failure(it)
+            }
+        }))
+    }
 }

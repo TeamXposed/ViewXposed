@@ -150,7 +150,7 @@
         app:srcCompat="@android:drawable/btn_star" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/ButtonTeste"
         android:layout_width="121dp"
         android:layout_height="68dp"
         android:layout_marginTop="46dp"
@@ -179,7 +179,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/butt_perfil"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/ButtonTeste"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <Button

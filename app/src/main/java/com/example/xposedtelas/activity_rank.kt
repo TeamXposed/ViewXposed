@@ -20,6 +20,10 @@ class activity_rank : AppCompatActivity() {
             startActivity(intent)
         }
 
+        ButtonTeste.setOnClickListener {
+            val intent = Intent(this, activity_listDenuncia::class.java)
+            startActivity(intent)
+        }
     }
 
 }
