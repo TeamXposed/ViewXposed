@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import com.example.Model.Client
-import com.example.xposedtelas.Retrofit.Client.ClientWeb
+import com.example.Model.Cliente
+import com.example.xposedtelas.Retrofit.Client.ClienteWeb
 import kotlinx.android.synthetic.main.activity_cadastro.*
 
 class ActivityCadastro : AppCompatActivity() {
@@ -24,15 +24,15 @@ class ActivityCadastro : AppCompatActivity() {
         }
     }
 
-    fun insert(created: (createdClient: Client) -> Unit) {
+    fun insert(created: (createdCliente: Cliente) -> Unit) {
         val nome: String = nome.text.toString();
         val email: String = email.text.toString();
         val senha: String = senha.text.toString();
         val telefone: String = telefone.text.toString();
         val cpf: String = cpf.text.toString();
-        val client = Client(nome = nome,telefone = telefone, email = email, senha = senha, cpf = cpf)
+        val client = Cliente(nome = nome,telefone = telefone, email = email, senha = senha, cpf = cpf)
 
-        ClientWeb().insert(client, {
+        ClienteWeb().insert(client, {
 
             Toast.makeText(this, "Email já está sendo utilizado!", Toast.LENGTH_LONG).show()
 

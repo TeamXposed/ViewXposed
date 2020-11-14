@@ -1,16 +1,16 @@
 package com.example.xposedtelas.Retrofit.Client
 
-import com.example.Model.Client
+import com.example.Model.Cliente
 import com.example.xposedtelas.Retrofit.RetrofitInitializer
 import com.example.xposedtelas.Retrofit.callback
 
-class ClientWeb {
+class ClienteWeb {
 
     fun insert(
-        client: Client, success: (client: Client) -> Unit,
+        cliente: Cliente, success: (cliente: Cliente) -> Unit,
         failure: (throwable: Throwable) -> Unit
     ) {
-        val call = RetrofitInitializer().clientservice().insert(client)
+        val call = RetrofitInitializer().clienteservice().insert(cliente)
         call.enqueue(callback({ response ->
             response?.body()?.let {
                 success(it)
@@ -23,10 +23,10 @@ class ClientWeb {
     }
 
     fun select(
-        client: Client, success: (client: Client) -> Unit,
+        cliente: Cliente, success: (cliente: Cliente) -> Unit,
         failure: (throwable: Throwable) -> Unit
     ) {
-        val call = RetrofitInitializer().clientservice().select(client)
+        val call = RetrofitInitializer().clienteservice().select(cliente)
         call.enqueue(callback({ response ->
             response?.body()?.let {
                 success(it)

@@ -4,12 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.View
 import android.widget.Toast
-import com.example.Model.Client
-import com.example.xposedtelas.Retrofit.Client.ClientWeb
-import kotlinx.android.synthetic.main.activity_cadastro.*
-import kotlinx.android.synthetic.main.activity_cadastro.email
+import com.example.Model.Cliente
+import com.example.xposedtelas.Retrofit.Client.ClienteWeb
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.Cadastrar
 
@@ -33,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         val nome: String = " ";
         val telefone: String = " ";
         val cpf: String = " ";
-        val client = Client(nome = nome, telefone = telefone, email = email, senha = senha, cpf = cpf);
+        val client = Cliente(nome = nome, telefone = telefone, email = email, senha = senha, cpf = cpf);
 
-        ClientWeb().select(client, {
+        ClienteWeb().select(client, {
 
             Toast.makeText(this, "Bem Vindo!", Toast.LENGTH_LONG).show()
             val intent = Intent(this,activity_rank ::class.java)
