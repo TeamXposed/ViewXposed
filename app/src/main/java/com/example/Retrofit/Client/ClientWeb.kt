@@ -26,7 +26,7 @@ class ClientWeb {
         client: Client, success: (client: Client) -> Unit,
         failure: (throwable: Throwable) -> Unit
     ) {
-        val call = RetrofitInitializer().clientservice().insert(client)
+        val call = RetrofitInitializer().clientservice().select(client)
         call.enqueue(callback({ response ->
             response?.body()?.let {
                 success(it)

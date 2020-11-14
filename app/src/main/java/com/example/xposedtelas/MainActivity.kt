@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ActivityCadastro::class.java)
             startActivity(intent)
         }
-
         buttonLogar.setOnClickListener{
             this.validarCampos()
         }
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         ClientWeb().select(client, {
 
-            Toast.makeText(this, "Entrou", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Bem Vindo!", Toast.LENGTH_LONG).show()
             val intent = Intent(this,activity_rank ::class.java)
             startActivity(intent)
 

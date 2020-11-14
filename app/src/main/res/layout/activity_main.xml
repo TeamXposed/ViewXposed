@@ -9,21 +9,6 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/Cadastrar"
-        android:layout_width="219dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="103dp"
-        android:background="#673AB7"
-        android:text="@string/criar_nova_conta"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -35,20 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
-
-    <Button
-        android:id="@+id/buttonLogar"
-        android:layout_width="234dp"
-        android:layout_height="62dp"
-        android:layout_marginBottom="34dp"
-        android:backgroundTint="#FC4A1A"
-        android:text="@string/entrar"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <View
         android:id="@+id/divider"
@@ -62,6 +33,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogar"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -92,22 +79,6 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="313dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="9dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -155,5 +126,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hacker1" />
+
+    <Button
+        android:id="@+id/buttonLogar"
+        android:layout_width="234dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="34dp"
+        android:backgroundTint="#FC4A1A"
+        android:text="@string/entrar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <Button
+        android:id="@+id/Cadastrar"
+        android:layout_width="219dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="103dp"
+        android:background="#673AB7"
+        android:text="@string/criar_nova_conta"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

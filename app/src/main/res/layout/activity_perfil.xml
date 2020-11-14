@@ -36,11 +36,15 @@
         android:id="@+id/toolbar3"
         android:layout_width="364dp"
         android:layout_height="558dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginBottom="1dp"
         android:background="#16673AB7"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="154dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
