@@ -15,6 +15,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".activity_denunciar"></activity>
         <activity android:name=".activity_perfil" />
+        <activity android:name=".activity_listDenuncia" />
         <activity android:name=".activity_rank" />
         <activity android:name=".ActivityCadastro" />
         <activity

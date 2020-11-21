@@ -10,7 +10,7 @@ class RetrofitInitializer {
     private val retrofit = Retrofit.Builder()
 
         // Colocar o ip da sua máquina
-        .baseUrl("http://10.0.45.172:3000")
+        .baseUrl("http://192.168.1.4:3000")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
