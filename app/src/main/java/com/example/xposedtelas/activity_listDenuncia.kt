@@ -19,9 +19,9 @@ class activity_listDenuncia : AppCompatActivity() {
         DenunciaWeb().list({
             denuncias.addAll(it)
             configureList()
-            Toast.makeText(this, "Trouxe", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "", Toast.LENGTH_LONG).show()
         }, {
-            Toast.makeText(this, "Falha ao buscar clientes", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Falha ao buscar denunciados", Toast.LENGTH_LONG).show()
         })
     }
 
