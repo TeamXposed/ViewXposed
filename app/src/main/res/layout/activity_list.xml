@@ -1,16 +1,17 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:background="#eb2207"
+    android:background="#291A43"
     android:maxHeight="250dp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#291A43" />
 
 
     <LinearLayout
@@ -23,16 +24,19 @@
             android:id="@+id/nome_jogo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:textSize="30dp"
+            app:fontFamily="@font/anton"
             tools:text="Nome" />
 
         <TextView
             android:id="@+id/nick_denunciado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#E4DB88"
             android:textSize="20dp"
+            app:fontFamily="@font/anton"
             tools:text="nick_denunciado" />
-
 
 
     </LinearLayout>

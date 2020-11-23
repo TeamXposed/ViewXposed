@@ -143,8 +143,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="288dp"
-        android:layout_height="161dp"
+        android:layout_width="285dp"
+        android:layout_height="160dp"
         android:layout_marginTop="362dp"
         android:layout_marginBottom="115dp"
         android:background="#129C27B0"
@@ -152,7 +152,7 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="@+id/butt_denuncia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
