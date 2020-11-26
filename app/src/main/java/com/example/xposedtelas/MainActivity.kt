@@ -9,6 +9,7 @@ import com.example.Model.Cliente
 import com.example.xposedtelas.Retrofit.Client.ClienteWeb
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.Cadastrar
+import kotlinx.android.synthetic.main.activity_rank.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
+
 
     private fun validarCampos() {
         val email: String = editTextTextEmailAddress.text.toString();

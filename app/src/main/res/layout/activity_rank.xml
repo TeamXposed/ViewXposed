@@ -12,16 +12,14 @@
         android:layout_width="297dp"
         android:layout_height="38dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="362dp"
         android:text="Comunidades mais tóxicas"
         android:textColor="#F44336"
         android:textSize="20sp"
         app:fontFamily="@font/audiowide"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton7"
@@ -57,7 +55,7 @@
         android:layout_marginEnd="167dp"
         android:layout_marginRight="167dp"
         android:layout_marginBottom="63dp"
-        android:onClick="exibir"
+
         app:layout_constraintBottom_toTopOf="@+id/toolbar2"
         app:layout_constraintEnd_toEndOf="@+id/imageButton12"
         app:layout_constraintHorizontal_bias="0.893"
@@ -83,63 +81,17 @@
         android:id="@+id/textView7"
         android:layout_width="160dp"
         android:layout_height="21dp"
-        android:layout_marginBottom="178dp"
+        android:layout_marginTop="321dp"
+        android:layout_marginBottom="180dp"
         android:text="TOP Denunciados"
         android:textColor="#F44336"
         android:textSize="16sp"
         app:fontFamily="@font/audiowide"
-        app:layout_constraintBottom_toTopOf="@+id/butt_denuncia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/top1"
-        android:textColor="#f2f5f3"
-        android:layout_width="112dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/top2"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <TextView
-        android:id="@+id/top2"
-        android:textColor="#f2f5f3"
-        android:layout_width="112dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="88dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
-
-    <TextView
-        android:id="@+id/top3"
-        android:textColor="#f2f5f3"
-        android:layout_width="112dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/top2"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -156,6 +108,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/top1"
+        android:layout_width="112dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textColor="#f2f5f3"
+        app:layout_constraintBottom_toTopOf="@+id/top2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/top2"
+        android:layout_width="112dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textColor="#f2f5f3"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/top3"
+        android:layout_width="112dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="#f2f5f3"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/top2"
+        app:layout_constraintVertical_bias="0.133" />
 
     <ImageView
         android:id="@+id/imageView2"

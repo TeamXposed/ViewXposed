@@ -19,7 +19,6 @@ class activity_listDenuncia : AppCompatActivity() {
         DenunciaWeb().list({
             denuncias.addAll(it)
             configureList()
-            Toast.makeText(this, "", Toast.LENGTH_LONG).show()
         }, {
             Toast.makeText(this, "Falha ao buscar denunciados", Toast.LENGTH_LONG).show()
         })
@@ -35,7 +34,8 @@ class activity_listDenuncia : AppCompatActivity() {
         recyclerView.adapter = ListAdapter(denuncias, this) { note, position ->
         }
         val layoutManager = StaggeredGridLayoutManager(
-            2, StaggeredGridLayoutManager.VERTICAL)
+            2, StaggeredGridLayoutManager.VERTICAL
+        )
         recyclerView.layoutManager = layoutManager
     }
 }
