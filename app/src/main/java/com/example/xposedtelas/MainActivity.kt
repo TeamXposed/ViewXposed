@@ -1,27 +1,36 @@
 package com.example.xposedtelas
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.text.TextUtils
+import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.example.Model.Cliente
 import com.example.xposedtelas.Retrofit.Client.ClienteWeb
+import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.Cadastrar
+import kotlinx.android.synthetic.main.activity_perfil.*
 import kotlinx.android.synthetic.main.activity_rank.*
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         Cadastrar.setOnClickListener {
             val intent = Intent(this, ActivityCadastro::class.java)
             startActivity(intent)
         }
-        buttonLogar.setOnClickListener{
+        buttonLogar.setOnClickListener {
             this.validarCampos()
+
         }
     }
 
@@ -31,20 +40,16 @@ class MainActivity : AppCompatActivity() {
         val nome: String = " ";
         val telefone: String = " ";
         val cpf: String = " ";
-        val client = Cliente(nome = nome, telefone = telefone, email = email, senha = senha, cpf = cpf);
+        val client =
+            Cliente(nome = nome, telefone = telefone, email = email, senha = senha, cpf = cpf);
 
         ClienteWeb().select(client, {
-
             Toast.makeText(this, "Bem Vindo!", Toast.LENGTH_LONG).show()
-            val intent = Intent(this,activity_rank ::class.java)
-            startActivity(intent)
-
+            guardaEmail()
         }, {
             Toast.makeText(this, "Email ou Senha incorreto", Toast.LENGTH_LONG).show()
         })
-
     }
-
 
     private fun validarCampos() {
         val email: String = editTextTextEmailAddress.text.toString();
@@ -65,7 +70,17 @@ class MainActivity : AppCompatActivity() {
             this.check();
         }
 
-
     }
 
+    fun guardaEmail() {
+        var emailCampo: String = editTextTextEmailAddress.text.toString()
+        var email: String = emailCampo
+
+        val intent = Intent(applicationContext, activity_rank::class.java)
+        val parametros = Bundle()
+        parametros.putString("email", email)
+        intent.putExtras(parametros)
+        startActivity(intent)
+
+    }
 }
