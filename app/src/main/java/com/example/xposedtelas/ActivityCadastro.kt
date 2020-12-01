@@ -54,7 +54,7 @@ class ActivityCadastro : AppCompatActivity() {
 
 
         if(TextUtils.isEmpty(campNome)){
-             nome.error = "Preencha o campo de Nome";
+            nome.error = "Preencha o campo de Nome";
             return
         }else if(campNome.trim().length < 4 ){
             nome.error = "O Nome não pode ter menos de 4 Letras";
@@ -89,7 +89,7 @@ class ActivityCadastro : AppCompatActivity() {
             cpf.error = "Preencha o campo de CPF";
             return
         }else if(campCpf.trim().length > 11){
-           cpf.error = "O CPF não pode ter mais de 11 Digitos!"
+            cpf.error = "O CPF não pode ter mais de 11 Digitos!"
             return
         } else if(campCpf.trim().length < 11){
             cpf.error = "O CPF não pode ter menos de 11 Digitos!";

@@ -24,9 +24,7 @@ class activity_perfil : AppCompatActivity() {
         setContentView(R.layout.activity_perfil)
 
         floatingActionButton2.setOnClickListener {
-            guardaEmail()
-            val intent = Intent(this, activity_rank::class.java)
-            startActivity(intent)
+            passEmail()
             textView10.clearComposingText()
         }
 
@@ -51,6 +49,7 @@ class activity_perfil : AppCompatActivity() {
         }, {
             Toast.makeText(this, "Falha ao buscar nome do usuario", Toast.LENGTH_LONG).show()
         })
+
     }
 
     private fun checkEmail() {
@@ -59,40 +58,41 @@ class activity_perfil : AppCompatActivity() {
         var parametros = Bundle(intent.getExtras())
 
         for (i in usuario.indices) {
-            if ( usuario[i].email.equals(parametros.getString("email").toString())) {
-                textView6.setText(usuario[i].nome)
-                return
-            }else if(i == usuario.size){
-                textView6.setText("Vazio")
+            if (usuario[i].email.equals(parametros.getString("email").toString())) {
+                textView6.setText("Olá, " + usuario[i].nome)
             }
-
         }
     }
 
-    private fun guardaEmail() {
+    private fun passEmail() {
 
-        var intent2 = Intent(getIntent())
-        var parametros2 = Bundle(intent2.getExtras())
+        var intent1 = Intent(getIntent())
+        var parametros1 = Bundle(intent1.getExtras())
 
-        val intent = Intent(applicationContext, activity_perfil::class.java)
+        val intent = Intent(applicationContext, activity_rank::class.java)
         val parametros = Bundle()
 
-        parametros.putString("email", parametros2.getString("email").toString())
-        intent.putExtras(parametros2)
+        parametros.putString("email", parametros1.getString("email").toString())
+        intent.putExtras(parametros1)
         startActivity(intent)
     }
 
-
     private fun onClick() {
 
-        var denunciado: String = ""
-        var denunciado3: String
+        var intent = Intent(getIntent())
+        var parametros = Bundle(intent.getExtras())
+
+
 
         for (i in denuncias.indices) {
-            var denunciado2: String = denuncias[i].nick_denunciado
-            denunciado3 = denunciado2;
-            textView10.setText(denunciado)
-            denunciado = denunciado3 + ", " + textView10.text.toString()
+            if (parametros.getString("email").toString().equals(denuncias[i].nome_denunciante)) {
+                textView10.setText(denuncias[i].nick_denunciado + ", " + textView10.text.toString())
+            }
         }
+        if (textView10.text.toString().equals(" ")) {
+            textView10.setText("Vazio")
+        }
+
     }
+
 }

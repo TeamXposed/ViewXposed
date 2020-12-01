@@ -45,9 +45,10 @@ class MainActivity : AppCompatActivity() {
 
         ClienteWeb().select(client, {
             Toast.makeText(this, "Bem Vindo!", Toast.LENGTH_LONG).show()
-            guardaEmail()
+            checkEmail()
+
         }, {
-            Toast.makeText(this, "Email ou Senha incorreto", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Email ou Senha incorretos", Toast.LENGTH_LONG).show()
         })
     }
 
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun guardaEmail() {
+    fun checkEmail() {
         var emailCampo: String = editTextTextEmailAddress.text.toString()
         var email: String = emailCampo
 

@@ -18,8 +18,7 @@ class activity_denunciar : AppCompatActivity() {
         setContentView(R.layout.activity_denunciar)
 
         floatingActionButton3.setOnClickListener {
-            val intent = Intent(this, activity_rank::class.java)
-            startActivity(intent)
+            passEmail()
         }
 
         button5.setOnClickListener {
@@ -42,8 +41,7 @@ class activity_denunciar : AppCompatActivity() {
             Toast.makeText(this, "Falha ao realizar denúncia", Toast.LENGTH_LONG).show()
         }, {
             Toast.makeText(this, "Denúncia realizada com sucesso", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, activity_rank::class.java)
-            startActivity(intent)
+
         })
     }
 
@@ -94,6 +92,28 @@ class activity_denunciar : AppCompatActivity() {
             return
         } else {
             this.insert { }
+
+            var intent1 = Intent(getIntent())
+            var parametros1 = Bundle(intent1.getExtras())
+
+            val intent = Intent(applicationContext, activity_rank::class.java)
+            val parametros = Bundle()
+
+            parametros.putString("email", parametros1.getString("email").toString())
+            intent.putExtras(parametros1)
+            startActivity(intent)
         }
+    }
+    private fun passEmail() {
+
+        var intent1 = Intent(getIntent())
+        var parametros1 = Bundle(intent1.getExtras())
+
+        val intent = Intent(applicationContext, activity_rank::class.java)
+        val parametros = Bundle()
+
+        parametros.putString("email", parametros1.getString("email").toString())
+        intent.putExtras(parametros1)
+        startActivity(intent)
     }
 }
