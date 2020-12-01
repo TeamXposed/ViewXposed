@@ -90,7 +90,7 @@ class activity_perfil : AppCompatActivity() {
             }
         }
         if (textView10.text.toString().equals(" ")) {
-            textView10.setText("Vazio")
+            textView10.setText("Sem Denúncias")
         }
 
     }
